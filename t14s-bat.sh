@@ -36,7 +36,7 @@ echo auto | sudo tee /sys/bus/pci/devices/0000:00:0d.0/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:1f.0/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:07.2/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:04.0/power/control
-echo auto | sudo tee /sys/bus/pci/devices/0000:00:14.3/power/control
+#echo auto | sudo tee /sys/bus/pci/devices/0000:00:14.3/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:0d.3/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:07.0/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:1f.5/power/control
