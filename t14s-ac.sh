@@ -22,7 +22,6 @@ echo balanced | sudo tee /sys/firmware/acpi/platform_profile
 
 
 #PM
-echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
 echo on | sudo tee /sys/bus/i2c/devices/i2c-5/device/power/control
 echo on | sudo tee /sys/bus/i2c/devices/i2c-7/device/power/control
 echo on | sudo tee /sys/bus/i2c/devices/i2c-9/device/power/control
