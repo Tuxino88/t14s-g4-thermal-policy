@@ -34,6 +34,8 @@ cp -a %{_builddir}/thermal/99-cTDP.rules %{buildroot}/etc/udev/rules.d/
 
 %{_bindir}/t14s-ac.sh
 %{_bindir}/t14s-bat.sh
+%{_bindir}/t14s-superbat.sh
+%{_bindir}/t14s-balanced.sh
 %{_sysconfdir}/udev/rules.d/99-cTDP.rules
 
 %changelog
