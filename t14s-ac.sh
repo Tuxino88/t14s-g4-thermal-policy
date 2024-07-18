@@ -3,10 +3,11 @@
 #cTDP
 echo 55000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_power_limit_uw
 echo 55000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_power_limit_uw
-echo 14000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw
+echo 114000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_2_power_limit_uw
+echo 15000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw
 echo 55000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw
-echo 127926272 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_time_window_us
-echo 2440 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_time_window_us
+#echo 127926272 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_time_window_us
+#echo 2440 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_time_window_us
 
 #CPU
 echo powersave | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -18,6 +19,7 @@ echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/hwp_dynamic_boost
 echo 0 | sudo tee /proc/sys/kernel/nmi_watchdog
 echo balanced | sudo tee /sys/firmware/acpi/platform_profile 
+
 
 #PM
 echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
@@ -67,4 +69,4 @@ echo disabled | sudo tee /sys/bus/usb/devices/3-3/power/wakeup
 #ASPM
 echo default | sudo tee /sys/module/pcie_aspm/parameters/policy
 echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
-echo 6000 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
+#echo 6000 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
