@@ -1,6 +1,6 @@
 Name:		t14s-g4-thermal-policy
-Version:	1
-Release:	2
+Version:	1.1
+Release:	1
 Summary:	personal thermal policy
 
 License:	GPLv3+	
