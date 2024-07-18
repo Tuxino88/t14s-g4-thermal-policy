@@ -1,2 +1,2 @@
 KERNEL=="AC*", SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="/bin/t14s-bat.sh"
-KERNEL=="AC*", SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="/bin/t14s-ac.sh"
+KERNEL=="AC*", SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="/bin/t14s-balanced.sh"
