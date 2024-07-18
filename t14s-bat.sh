@@ -2,11 +2,12 @@
 
 #cTDP
 echo 12000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_power_limit_uw
-echo 12000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_power_limit_uw
+echo 25000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_power_limit_uw
+echo 35000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_2_power_limit_uw
 echo 12000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw
-echo 12000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw
-echo 127926272 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_time_window_us
-echo 2440 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_time_window_us
+echo 25000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw
+#echo 127926272 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_time_window_us
+#echo 2440 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_time_window_us
 
 #CPU
 echo powersave | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -36,7 +37,7 @@ echo auto | sudo tee /sys/bus/pci/devices/0000:00:0d.0/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:1f.0/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:07.2/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:04.0/power/control
-#echo auto | sudo tee /sys/bus/pci/devices/0000:00:14.3/power/control
+echo auto | sudo tee /sys/bus/pci/devices/0000:00:14.3/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:0d.3/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:07.0/power/control
 echo auto | sudo tee /sys/bus/pci/devices/0000:00:1f.5/power/control
@@ -67,4 +68,4 @@ echo disabled | sudo tee /sys/bus/usb/devices/3-3/power/wakeup
 #ASPM
 echo powersupersave | sudo tee /sys/module/pcie_aspm/parameters/policy
 echo 1 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
-echo 1500 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
+#echo 1500 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
