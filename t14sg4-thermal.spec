@@ -5,7 +5,7 @@ Summary:	personal thermal policy
 
 License:	GPLv3+	
 BuildArch:	noarch
-#Source0: 	thermal.tar.xz
+Source0: 	thermal.tar.xz
 
 Conflicts:	tlp*
 Conflicts:	power-profiles-daemon
