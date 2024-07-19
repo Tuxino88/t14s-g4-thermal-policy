@@ -25,6 +25,8 @@ mkdir -p %{buildroot}/etc/udev/rules.d
 
 cp -a %{_builddir}/t14s-g4-thermal-policy/t14s-ac.sh %{buildroot}/usr/bin/
 cp -a %{_builddir}/t14s-g4-thermal-policy/t14s-bat.sh %{buildroot}/usr/bin/
+cp -a %{_builddir}/t14s-g4-thermal-policy/t14s-balanced.sh %{buildroot}/usr/bin/
+cp -a %{_builddir}/t14s-g4-thermal-policy/t14s-superbat.sh %{buildroot}/usr/bin/
 cp -a %{_builddir}/t14s-g4-thermal-policy/99-cTDP.rules %{buildroot}/etc/udev/rules.d/
 
 
