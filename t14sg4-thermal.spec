@@ -36,7 +36,7 @@ cp -a %{_builddir}/t14s-g4-thermal-policy/99-cTDP.rules %{buildroot}/etc/udev/ru
 %{_bindir}/t14s-bat.sh
 %{_bindir}/t14s-superbat.sh
 %{_bindir}/t14s-balanced.sh
-%{_sysconfdir}/udev/rules.d/99-cTDP.rules
+%{_sysconfdir}/udev/rules.d/98-cTDP.rules
 
 %changelog
 none
