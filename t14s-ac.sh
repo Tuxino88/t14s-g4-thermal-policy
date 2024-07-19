@@ -68,4 +68,4 @@ echo disabled | sudo tee /sys/bus/usb/devices/3-3/power/wakeup
 #ASPM
 echo default | sudo tee /sys/module/pcie_aspm/parameters/policy
 echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
-#echo 6000 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
+echo 500 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
