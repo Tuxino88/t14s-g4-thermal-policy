@@ -10,8 +10,8 @@ echo 25000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_powe
 #echo 2440 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_time_window_us
 
 #CPU
-echo powersave | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-echo power | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/energy_performance_preference
+echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+echo balance_power | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/energy_performance_preference
 echo 15 | sudo tee /sys/devices/system/cpu/cpu*/power/energy_perf_bias
 echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/min_perf_pct
 echo 30 | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct
@@ -19,6 +19,10 @@ echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/hwp_dynamic_boost
 echo 0 | sudo tee /proc/sys/kernel/nmi_watchdog
 echo low-power | sudo tee /sys/firmware/acpi/platform_profile 
+
+#GPU
+echo 700 | sudo tee /sys/class/drm/card1/gt_max_freq_mhz
+echo 900 | sudo tee /sys/class/drm/card1/gt_boost_freq_mhz
 
 #PM
 echo auto | sudo tee /sys/bus/i2c/devices/i2c-5/device/power/control
@@ -65,6 +69,6 @@ echo disabled | sudo tee /sys/bus/usb/devices/usb2/power/wakeup
 echo disabled | sudo tee /sys/bus/usb/devices/3-3/power/wakeup
 
 #ASPM
-echo powersupersave | sudo tee /sys/module/pcie_aspm/parameters/policy
+echo powersave | sudo tee /sys/module/pcie_aspm/parameters/policy
 echo 1 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
-echo 1500 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
+#echo 1500 | sudo tee /proc/sys/vm/dirty_writeback_centisecs
