@@ -1,5 +1,5 @@
 Name:		t14s-g4-thermal-policy
-Version:	1.1
+Version:	1.2
 Release:	1
 Summary:	personal thermal policy
 
