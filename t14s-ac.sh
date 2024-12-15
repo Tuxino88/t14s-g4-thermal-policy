@@ -12,17 +12,17 @@ echo 55000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_powe
 #CPU
 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/energy_performance_preference
-echo 4 | sudo tee /sys/devices/system/cpu/cpu*/power/energy_perf_bias
-echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/min_perf_pct
-echo 100 | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct
-echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
-echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/hwp_dynamic_boost
+#echo 4 | sudo tee /sys/devices/system/cpu/cpu*/power/energy_perf_bias
+#echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/min_perf_pct
+#echo 100 | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct
+#echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
+#echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/hwp_dynamic_boost
 echo 0 | sudo tee /proc/sys/kernel/nmi_watchdog
 echo performance | sudo tee /sys/firmware/acpi/platform_profile 
 
 #GPU
-echo 1300 | sudo tee /sys/class/drm/card1/gt_max_freq_mhz
-echo 1300 | sudo tee /sys/class/drm/card1/gt_boost_freq_mhz
+#echo 1300 | sudo tee /sys/class/drm/card1/gt_max_freq_mhz
+#echo 1300 | sudo tee /sys/class/drm/card1/gt_boost_freq_mhz
 
 #PM
 echo on | sudo tee /sys/bus/i2c/devices/i2c-5/device/power/control
