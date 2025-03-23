@@ -4,8 +4,8 @@
 echo 55000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_power_limit_uw
 echo 55000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_power_limit_uw
 echo 114000000 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_2_power_limit_uw
-echo 15000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw
-echo 55000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw
+echo 15000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw #Limite a lungo termine
+echo 55000000 | sudo tee /sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw #limite di picco
 #echo 127926272 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_0_time_window_us
 #echo 2440 | sudo tee /sys/class/powercap/intel-rapl/intel-rapl:0/constraint_1_time_window_us
 
